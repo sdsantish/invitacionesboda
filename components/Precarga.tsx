@@ -42,6 +42,14 @@ function precargarImagen(src: string): Promise<void> {
   });
 }
 
+/*
+  iOS (y cualquier navegador en modo de ahorro de batería) ignora
+  preload="auto": no descarga el audio hasta que hay un toque, así que
+  canplaythrough nunca llega y la carga quedaba trabada. Pasado este
+  tiempo se deja de esperar; la canción se descarga igual cuando suena.
+*/
+const ESPERA_MAXIMA_AUDIO = 3000;
+
 function esperarAudio(audio: HTMLAudioElement): Promise<void> {
   return new Promise((resolve) => {
     if (audio.readyState >= 4) {
@@ -50,6 +58,7 @@ function esperarAudio(audio: HTMLAudioElement): Promise<void> {
     }
     audio.addEventListener("canplaythrough", () => resolve(), { once: true });
     audio.addEventListener("error", () => resolve(), { once: true });
+    window.setTimeout(resolve, ESPERA_MAXIMA_AUDIO);
   });
 }
 
