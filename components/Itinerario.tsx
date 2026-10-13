@@ -12,20 +12,38 @@ type Hito = {
   hora: string;
   evento: string;
   iconoIzquierda: boolean;
+  /* La foto del lugar lleva esquinas redondeadas; los íconos no */
+  redondeada?: boolean;
+  /*
+    Alto que ocupa la fila si es mayor que la imagen. La línea central
+    mide fijo 321px, la suma de las filas, así que la foto (más baja que
+    el kiosco que reemplazó) conserva el alto de 53px de esa fila.
+  */
+  altoFila?: number;
 };
 
 function Icono({ hito }: { hito: Hito }) {
   return (
-    <Ilustracion src={hito.src} alt={hito.alt} w={hito.w} h={hito.h} />
+    <div className="flex items-center" style={{ height: hito.altoFila }}>
+      <Ilustracion
+        src={hito.src}
+        alt={hito.alt}
+        w={hito.w}
+        h={hito.h}
+        className={hito.redondeada ? "rounded-[6px]" : undefined}
+      />
+    </div>
   );
 }
 
 const HITOS: Hito[] = [
   {
     src: "/images/logos/FotoLugar.png",
-    alt: "Kiosco de la ceremonia",
+    alt: "Lugar de la ceremonia",
     w: 70,
-    h: 53,
+    h: 37,
+    redondeada: true,
+    altoFila: 53,
     hora: "2:30 PM",
     evento: "Ceremonia",
     iconoIzquierda: true,

@@ -19,12 +19,12 @@ export default function Ceremonia() {
         src="/images/logos/FotoLugar.png"
         alt="Ilustración del lugar de la ceremonia"
         w={140}
-        h={105}
-        className="mt-[20px]"
+        h={74}
+        className="mt-[20px] rounded-[10px]"
       />
 
-      {/* Ilustración -> botón: 10px */}
-      <Boton href={MAPA} ancho={83} className="mt-[10px]">
+      {/* Ilustración -> botón: 40px */}
+      <Boton href={MAPA} ancho={83} className="mt-[40px]">
         Ver mapa
       </Boton>
 
