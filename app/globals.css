@@ -461,3 +461,37 @@ body {
   outline: 2px solid rgb(164 138 119 / 0.6);
   outline-offset: 3px;
 }
+
+/*
+  Aviso de "desliza para que empiece la música": flota abajo al centro
+  después de abrir la invitación y se desvanece con el primer scroll.
+*/
+.aviso-musica {
+  position: fixed;
+  left: 50%;
+  bottom: calc(24px + env(safe-area-inset-bottom));
+  z-index: 40;
+  width: max-content;
+  max-width: calc(100% - 32px);
+  padding: 8px 16px;
+  border-radius: 999px;
+  background-color: rgb(250 246 236 / 0.92);
+  box-shadow: 0 2px 10px rgb(118 107 58 / 0.15);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(173 143 124);
+  opacity: 0;
+  transform: translate(-50%, 8px);
+  pointer-events: none;
+  transition:
+    opacity 600ms ease-out,
+    transform 600ms ease-out;
+}
+
+.aviso-musica.aviso-musica-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  animation: precarga-respirar 1800ms ease-in-out 900ms infinite;
+}

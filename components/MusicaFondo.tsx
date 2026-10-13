@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, type RefObject } from "react";
+import { useEffect, useState, type RefObject } from "react";
 
 /*
   Solo maneja cuándo suena, no el elemento <audio> en sí: lo monta
@@ -21,6 +21,20 @@ export default function MusicaFondo({
   audioRef: RefObject<HTMLAudioElement | null>;
   armado: boolean;
 }) {
+  /*
+    Aviso flotante que explica que la música arranca al deslizar. Se
+    muestra al abrir la invitación y se va con el primer scroll, suene
+    o no la canción, para no quedar tapando la página.
+  */
+  const [deslizado, setDeslizado] = useState(false);
+
+  useEffect(() => {
+    if (!armado) return;
+    const ocultar = () => setDeslizado(true);
+    window.addEventListener("scroll", ocultar, { passive: true, once: true });
+    return () => window.removeEventListener("scroll", ocultar);
+  }, [armado]);
+
   useEffect(() => {
     if (!armado) return;
     const audio = audioRef.current;
@@ -45,5 +59,12 @@ export default function MusicaFondo({
     return () => window.removeEventListener("scroll", reproducir);
   }, [audioRef, armado]);
 
-  return null;
+  return (
+    <p
+      className={`aviso-musica t-body ${armado && !deslizado ? "aviso-musica-visible" : ""}`}
+      aria-hidden={!armado || deslizado}
+    >
+      Desliza hacia abajo para que empiece la música
+    </p>
+  );
 }
