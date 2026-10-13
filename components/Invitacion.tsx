@@ -7,7 +7,7 @@ const LINEA = "rgb(164 138 119 / 0.7)";
 
 /*
   Cada extremo del bloque de fecha es un "sándwich": línea, palabra, línea.
-  El alto fijo hace que las reglas caigan a la altura del 09.
+  El alto fijo hace que las reglas caigan a la altura del 30.
 */
 function Extremo({ texto }: { texto: string }) {
   return (
@@ -67,7 +67,7 @@ export default function Invitacion() {
             className="t-body mx-[14px] leading-none"
             style={{ fontSize: 40, color: FECHA }}
           >
-            09
+            30
           </span>
           <Extremo texto="2026" />
         </div>

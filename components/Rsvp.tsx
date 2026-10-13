@@ -10,7 +10,7 @@ const WHATSAPP = "573007625809";
 
 function mensaje(invitado: Invitado): string {
   return encodeURIComponent(
-    `¡Hola! Somos ${invitado.ref}. Confirmamos nuestra asistencia a la boda de Johana y Sebastián el 9 de octubre de 2026. Contamos con ${invitado.cupos} cupos.`,
+    `¡Hola! Somos ${invitado.ref}. Confirmamos nuestra asistencia a la boda de Johana y Sebastián el 30 de octubre de 2026. Contamos con ${invitado.cupos} cupos.`,
   );
 }
 

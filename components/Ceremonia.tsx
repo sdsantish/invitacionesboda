@@ -1,7 +1,7 @@
 import Boton from "@/components/Boton";
 import Ilustracion from "@/components/Ilustracion";
 
-const MAPA = "https://maps.app.goo.gl/3HSu2PP3mCoKhfFA8";
+const MAPA = "https://maps.app.goo.gl/jc3wk9fEJWoTbEME7";
 
 export default function Ceremonia() {
   return (
@@ -17,7 +17,7 @@ export default function Ceremonia() {
       {/* Título -> ilustración: 20px */}
       <Ilustracion
         src="/images/logos/FotoLugar.png"
-        alt="Ilustración del kiosco de Canasto Picnic"
+        alt="Ilustración del lugar de la ceremonia"
         w={140}
         h={105}
         className="mt-[20px]"
@@ -32,11 +32,11 @@ export default function Ceremonia() {
         className="t-parrafo mt-[20px]"
         style={{ fontSize: 10, lineHeight: "17px", color: "#ad8f7c" }}
       >
-        Canasto Picnic
+        Prado Park
         <br />
-        Sincelejo, Sucre
+        Bogotá
         <br />
-        4:30 PM
+        2:30 PM
       </p>
     </section>
   );

@@ -28,7 +28,7 @@ export default function Portada() {
         className="t-body t-dorado leading-none"
         style={{ fontSize: 17, marginTop: 20 }}
       >
-        09 - 10 - 2026
+        30 - 10 - 2026
       </p>
 
       {/* Los saltos son explícitos para respetar el corte de línea del diseño */}
