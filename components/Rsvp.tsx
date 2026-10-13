@@ -9,9 +9,17 @@ import type { Invitado } from "@/data/invitados";
 const WHATSAPP = "573007625809";
 
 function mensaje(invitado: Invitado): string {
-  return encodeURIComponent(
-    `¡Hola! Somos ${invitado.ref}. Confirmamos nuestra asistencia a la boda de Johana y Sebastián el 30 de octubre de 2026. Contamos con ${invitado.cupos} cupos.`,
-  );
+  const boda = "a la boda de Johana y Sebastián el 30 de octubre de 2026";
+  /*
+    Con un solo cupo el mensaje va en singular y no menciona los cupos.
+    Quien escribe es la invitada misma, así que no dice "Soy Tia Ledys".
+  */
+  const nombre = invitado.ref.replace(/^T[ií]a\s+/i, "");
+  const texto =
+    invitado.cupos === 1
+      ? `¡Hola! Soy ${nombre}. Confirmo mi asistencia ${boda}.`
+      : `¡Hola! Somos ${invitado.ref}. Confirmamos nuestra asistencia ${boda}. Contamos con ${invitado.cupos} cupos.`;
+  return encodeURIComponent(texto);
 }
 
 export default function Rsvp({ invitado }: { invitado: Invitado }) {
