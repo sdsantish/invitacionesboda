@@ -1,7 +1,8 @@
 export type Invitado = {
   id: string;
   ref: string;
-  cupos: number;
+  /* "libre": invitación sin un número fijo de cupos */
+  cupos: number | "libre";
 };
 
 export const INVITADOS: Invitado[] = [
@@ -27,7 +28,7 @@ export const INVITADOS: Invitado[] = [
   { id: "dyt9moge4qxxva2ieuc1hh5lf", ref: "Tia Ledys", cupos: 1 },
   { id: "6a4fejgxaa2ilgb0s0r2sds8b", ref: "Tia Ninfa", cupos: 1 },
   { id: "25sq8croyr6ccvcjwtl9tqvdz", ref: "Tia Evelys y Primas", cupos: 3 },
-
+  { id: "alunsga32nf2ovxu1cpeit8ws", ref: "German Calderon España y Familia", cupos: "libre" },
 ];
 
 /*

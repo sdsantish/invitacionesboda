@@ -15,6 +15,12 @@ function mensaje(invitado: Invitado): string {
     Quien escribe es la invitada misma, así que no dice "Soy Tia Ledys".
   */
   const nombre = invitado.ref.replace(/^T[ií]a\s+/i, "");
+  /* Con cupo libre no hay número que confirmar: lo completa quien escribe */
+  if (invitado.cupos === "libre") {
+    return encodeURIComponent(
+      `¡Hola! Somos ${invitado.ref}. Confirmamos nuestra asistencia ${boda}. Seremos ___ personas.`,
+    );
+  }
   const texto =
     invitado.cupos === 1
       ? `¡Hola! Soy ${nombre}. Confirmo mi asistencia ${boda}.`
@@ -77,8 +83,14 @@ export default function Rsvp({ invitado }: { invitado: Invitado }) {
       >
         {invitado.ref}
         <br />
-        Cupos Disponibles
-        <br />({invitado.cupos})
+        {invitado.cupos === "libre" ? (
+          "Cupo Libre"
+        ) : (
+          <>
+            Cupos Disponibles
+            <br />({invitado.cupos})
+          </>
+        )}
       </p>
     </section>
   );
