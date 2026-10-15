@@ -29,6 +29,9 @@ export const INVITADOS: Invitado[] = [
   { id: "6a4fejgxaa2ilgb0s0r2sds8b", ref: "Tia Ninfa", cupos: 1 },
   { id: "25sq8croyr6ccvcjwtl9tqvdz", ref: "Tia Evelys y Primas", cupos: 3 },
   { id: "alunsga32nf2ovxu1cpeit8ws", ref: "German Calderon España y Familia", cupos: "libre" },
+  { id: "10ea8ghmh5tms2blotot1ebkj", ref: "Laura Aguirre", cupos: 1 },
+  { id: "9wi2rjfyv789f95avfwgp1whm", ref: "Jesus Aguirre", cupos: 1 },
+  { id: "8wrhm0o6jqonah4t0qmbrilbv", ref: "Jorge Lozada", cupos: 1 },
 ];
 
 /*
