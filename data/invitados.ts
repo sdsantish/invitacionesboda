@@ -35,10 +35,11 @@ export const INVITADOS: Invitado[] = [
   { id: "lu20q7n7tfal5lmrvtpbztfea", ref: "Glenda Nasser y Familia", cupos: 4 },
   { id: "5qzy3zlvtsarorg07h6do5bci", ref: "Carlos Santis Cerro", cupos: 2 },
   { id: "3qsydcjh36xsa42u787nzbzgc", ref: "Wadith Santis y Familia", cupos: 4 },
-  { id: "zr0l0abg2geduzkkujo4xz0w0", ref: "Isabel Maria Cerro", cupos: 1 },
+  { id: "zr0l0abg2geduzkkujo4xz0w0", ref: "Isabel Cerro y Familia", cupos: 3 },
   { id: "fcqepn167z2p8ja56n9p03i39", ref: "Isabel Cristina Cerro", cupos: 1 },
   { id: "i6rghi0fpdpmlslzp9p8lzf6a", ref: "Juan Monterroza y Familia", cupos: 2 },
   { id: "tigf3q1wbm6mynb1uds0rmdqs", ref: "Manuel Monterroza Simpson", cupos: 1 },
+  { id: "nsppwzmrsbuq04mpapg4necjy", ref: "Marco Luis Santis", cupos: 1 },
 ];
 
 /*
