@@ -40,6 +40,7 @@ export const INVITADOS: Invitado[] = [
   { id: "i6rghi0fpdpmlslzp9p8lzf6a", ref: "Juan Monterroza y Familia", cupos: 2 },
   { id: "tigf3q1wbm6mynb1uds0rmdqs", ref: "Manuel Monterroza Simpson", cupos: 1 },
   { id: "nsppwzmrsbuq04mpapg4necjy", ref: "Marco Luis Santis", cupos: 2 },
+  { id: "gg0mwhq3uvrp6criau2rc1gas", ref: "Ligia Gonzalez", cupos: 1 },
 ];
 
 /*
