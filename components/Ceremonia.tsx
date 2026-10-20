@@ -1,7 +1,7 @@
 import Boton from "@/components/Boton";
 import Ilustracion from "@/components/Ilustracion";
 
-const MAPA = "https://maps.app.goo.gl/jc3wk9fEJWoTbEME7";
+const MAPA = "https://maps.app.goo.gl/EqZL8qRGYvgpscaL7";
 
 export default function Ceremonia() {
   return (
@@ -19,7 +19,7 @@ export default function Ceremonia() {
         src="/images/logos/FotoLugar.png"
         alt="Ilustración del lugar de la ceremonia"
         w={140}
-        h={74}
+        h={79}
         className="mt-[20px] rounded-[10px]"
       />
 
@@ -32,11 +32,15 @@ export default function Ceremonia() {
         className="t-parrafo mt-[20px]"
         style={{ fontSize: 10, lineHeight: "17px", color: "#ad8f7c" }}
       >
-        Prado Park
+        Círculo de Suboficiales
+        <br />
+        de las Fuerzas Militares
+        <br />
+        Sede Social Colina Campestre
         <br />
         Bogotá
         <br />
-        2:30 PM
+        4:00 PM
       </p>
     </section>
   );

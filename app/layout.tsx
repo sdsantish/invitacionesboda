@@ -19,7 +19,7 @@ const gulzar = Gulzar({
 export const metadata: Metadata = {
   title: "Johana & Sebastián · 30.10.2026",
   description:
-    "Nos casamos el viernes 30 de octubre de 2026 en Prado Park, Bogotá. Acompáñanos a celebrar.",
+    "Nos casamos el viernes 30 de octubre de 2026 en el Círculo de Suboficiales de las Fuerzas Militares, Sede Social Colina Campestre, Bogotá. Acompáñanos a celebrar.",
   openGraph: {
     title: "Johana & Sebastián · 30.10.2026",
     description: "Acompáñanos a celebrar nuestro amor.",
