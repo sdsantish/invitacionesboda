@@ -38,6 +38,7 @@ export default function Ceremonia() {
         <br />
         Sede Social Colina Campestre
         <br />
+        <br />
         Bogotá
         <br />
         4:00 PM
